@@ -30,6 +30,15 @@ class MyAppState extends State<MyApp> {
         {'text': 'Bankok', 'score': 2},
         {'text': 'Maldeebs', 'score': 6}
       ],
+    },
+    {
+      'questionText': 'What\'s  your favourite color?',
+      'answers': [
+        {'text': 'Black', 'score': 4},
+        {'text': 'Blue', 'score': 3},
+        {'text': 'White', 'score': 2},
+        {'text': 'Yellow', 'score': 6}
+      ],
     }
   ];
   var _questionIndex = 0;
@@ -45,7 +54,7 @@ class MyAppState extends State<MyApp> {
   void _answerQuestion(int score) {
     _totalScore += score;
     setState(() {
-      _questionIndex = _questionIndex + 1;
+      _questionIndex = _questionIndex + 2;
     });
     print(_questionIndex);
     if (_questionIndex < _questions.length) {
